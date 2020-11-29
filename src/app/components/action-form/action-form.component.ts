@@ -29,7 +29,7 @@ export class ActionFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // Get Likes Slider Info
+  // Get Slider Tick Info
   getSliderTickInterval(): number | 'auto' {
     if (this.showTicks) {
       return this.autoTicks ? 'auto' : this.tickInterval;
