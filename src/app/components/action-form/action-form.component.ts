@@ -38,5 +38,12 @@ export class ActionFormComponent implements OnInit {
     return 0;
   }
 
+  /** Like a Post
+   * 1. Get number of post to like from user
+   * 2. Use Query selector to find button
+   * 3. For each item to like
+   */
+  
+
 
 }
