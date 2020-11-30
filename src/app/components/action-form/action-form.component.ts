@@ -1,5 +1,4 @@
-import { Component, OnInit, SimpleChanges } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'action-form',
@@ -7,6 +6,13 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./action-form.component.css']
 })
 export class ActionFormComponent implements OnInit {
+  destination = "https://instagram.com"
+  isDoneLoading = false
+  // Like Button DOM Object
+  likeBtnPosition = 1
+  likeBtnSeletor = "#react-root > section > main > section > div > div:nth-child(2) > div > article:nth-child(" + this.likeBtnPosition + ") > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button"
+  likeBtn: HTMLElement = document.querySelector(this.likeBtnSeletor) as HTMLElement;
+
   // Form Model
   commentBool = false;
 
@@ -38,12 +44,29 @@ export class ActionFormComponent implements OnInit {
     return 0;
   }
 
+  // Navigate to Instagram
+  goToInstagram() {
+    window.location.href = this.destination
+    setTimeout(() => { this.isDoneLoading = true }, 3000);
+  }
+
   /** Like a Post
    * 1. Get number of post to like from user
-   * 2. Use Query selector to find button
+   * 2. Use Query selector to find button instance
    * 3. For each item to like
+   *    - if the area-label="Unlike"
+   *    -- skip
    */
-  
-
+  likePosts(numLikesVal) {
+    // this.goToInstagram()
+    $(document).ready(function () {
+      while (numLikesVal != 0) {
+        this.likeBtn.click()
+        this.likeBtnPosition++
+        this.likeBtnSeletor = "#react-root > section > main > section > div > div:nth-child(2) > div > article:nth-child(" + this.likeBtnPosition + ") > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button"
+        numLikesVal--
+      }
+    });
+  }
 
 }
