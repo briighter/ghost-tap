@@ -44,11 +44,6 @@ export class ActionFormComponent implements OnInit {
     return 0;
   }
 
-  // Navigate to Instagram
-  goToInstagram() {
-    window.location.href = this.destination
-    setTimeout(() => { this.isDoneLoading = true }, 3000);
-  }
 
   /** Like a Post
    * 1. Get number of post to like from user
@@ -58,15 +53,12 @@ export class ActionFormComponent implements OnInit {
    *    -- skip
    */
   likePosts(numLikesVal) {
-    // this.goToInstagram()
-    $(document).ready(function () {
-      while (numLikesVal != 0) {
-        this.likeBtn.click()
-        this.likeBtnPosition++
-        this.likeBtnSeletor = "#react-root > section > main > section > div > div:nth-child(2) > div > article:nth-child(" + this.likeBtnPosition + ") > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button"
-        numLikesVal--
-      }
-    });
+    while (numLikesVal != 0) {
+      this.likeBtn.click()
+      this.likeBtnPosition++
+      this.likeBtnSeletor = "#react-root > section > main > section > div > div:nth-child(2) > div > article:nth-child(" + this.likeBtnPosition + ") > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button"
+      numLikesVal--
+    }
   }
 
 }
