@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { RouterModule } from "@angular/router";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
@@ -21,6 +22,7 @@ import { LoginComponent } from './components/login/login.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    RouterModule,
     ReactiveFormsModule,
     FormsModule,
     MatFormFieldModule,

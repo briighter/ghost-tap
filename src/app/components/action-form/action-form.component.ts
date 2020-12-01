@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from "@angular/router";
 @Component({
   selector: 'action-form',
   templateUrl: './action-form.component.html',
   styleUrls: ['./action-form.component.css']
 })
 export class ActionFormComponent implements OnInit {
-  destination = "https://instagram.com"
-  isDoneLoading = false
   // Like Button DOM Object
   likeBtnPosition = 1
   likeBtnSeletor = "#react-root > section > main > section > div > div:nth-child(2) > div > article:nth-child(" + this.likeBtnPosition + ") > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button"
@@ -30,7 +28,7 @@ export class ActionFormComponent implements OnInit {
   tickInterval = 1;
   /*---------------------------*/
 
-  constructor() { }
+  constructor(router: Router) { }
 
   ngOnInit(): void {
   }
