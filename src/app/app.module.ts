@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DriverComponent } from './driver/driver.component';
+import { DriverService } from "./services/driver.service";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { DriverComponent } from './driver/driver.component';
     BrowserModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [DriverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DriverService } from "./../driver.service";
 
 @Component({
   selector: 'app-driver',
@@ -8,13 +7,9 @@ import { DriverService } from "./../driver.service";
 })
 export class DriverComponent implements OnInit {
 
-  constructor(private driverService: DriverService) { }
+  constructor() { }
 
   ngOnInit(): void {
-
-  }
-
-  buildDriver(): void {
   }
 
 }
