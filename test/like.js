@@ -17,4 +17,4 @@ describe('Test Ghost Tap App', function () {
         expect(username.getText()).toContain('realjasonlima')
         browser.driver.sleep(500)
     })
-});
+})
