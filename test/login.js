@@ -27,6 +27,6 @@ describe('Login with Ghost Tap', function () {
         expect(username.getAttribute('value')).toContain('realjasonlima')
         expect(password.getAttribute('value')).toContain('password')
 
-        browser.driver.sleep(6000)
+        browser.driver.sleep(4000)
     })
 })
