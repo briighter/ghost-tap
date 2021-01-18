@@ -5,7 +5,7 @@ describe('Like Photos in feed', function () {
     beforeEach(function () {
         browser.waitForAngularEnabled(false)
         browser.ignoreSynchronization = true;
-        browser.get("https://www.instagram.com/")
+        // browser.get("https://www.instagram.com/")
         browser.driver.sleep(2000)
         browser.refresh(2000)
     })
