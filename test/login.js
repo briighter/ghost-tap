@@ -34,7 +34,5 @@ describe('Login with Ghost Tap', function () {
         turnOnNotiBtn.click()
         browser.driver.sleep(2500)
 
-
-        browser.driver.sleep(4000)
     })
 })
