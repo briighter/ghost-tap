@@ -13,6 +13,8 @@ export class DriverComponent implements OnInit {
     numLikes: new FormControl('')
   })
 
+  // Cleaning
+  formNumLikes = this.actionForm.controls['numLikes'].value
 
   constructor() { }
 
