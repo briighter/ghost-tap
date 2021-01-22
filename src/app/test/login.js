@@ -21,6 +21,7 @@ describe('Login with Ghost Tap', function () {
             loginBtn.click()
         }
 
+        // TODO: Get user input for values
         sendLoginKeys('realjasonlima', 'password')
         expect(username.getAttribute('value')).toContain('realjasonlima')
         expect(password.getAttribute('value')).toContain('password')

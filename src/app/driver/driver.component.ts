@@ -1,5 +1,7 @@
+import { compileNgModule } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { nodeName } from 'jquery';
 
 @Component({
   selector: 'app-driver',
@@ -22,9 +24,12 @@ export class DriverComponent implements OnInit {
   }
 
   onSubmit() {
-    console.warn(this.actionForm.value)
+    // Run: protractor conf.js
+    console.log(this.actionForm.value)
+    console.log(this.actionForm.controls['username'].value)
+    console.log(this.actionForm.controls['password'].value)
     console.log(this.actionForm.controls['numLikes'].value)
-    console.warn(this.actionForm)
+    
   }
 
 }

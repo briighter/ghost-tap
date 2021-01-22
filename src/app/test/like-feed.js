@@ -11,7 +11,7 @@ describe('Like Photos in feed', function () {
     })
 
     it('should like pictures', function () {
-        var numToLike = 2
+        var numToLike = 2 // TODO: Get user input for value
         var likeBtnIndex = 1
         var likeBtn = browser.driver.findElement(by.css('#react-root > section > main > section > div > div:nth-child(2) > div > article:nth-child('+ likeBtnIndex +') > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button'))
         while (numToLike > 0) {
